@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "CHECKING FOR DIRECTORY ~/Movies/";
+if [ ! -d $HOME/Movies ]; then
+  echo " ...CREATING."
+  mkdir -p $HOME/Movies;
+fi
+
+echo "CHECKING FOR DIRECTORY ~/Music/";
+if [ ! -d $HOME/Music ]; then
+  echo " ...CREATING."
+  mkdir -p $HOME/Music;
+fi

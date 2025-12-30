@@ -1,0 +1,7 @@
+[Unit]
+Description=Headless CD Ripper
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/audio-cd-rip.sh
+User=root

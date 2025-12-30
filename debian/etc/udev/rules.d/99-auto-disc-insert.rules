@@ -1,0 +1,2 @@
+SUBSYSTEM=="block", KERNEL=="sr1", ACTION=="change", ENV{ID_CDROM_MEDIA_DVD}=="1", RUN+="/usr/bin/systemctl start movie-dvd-rip.service"
+SUBSYSTEM=="block", KERNEL=="sr0", ACTION=="change", ENV{ID_CDROM_MEDIA_CD}=="1", RUN+="/usr/bin/systemctl start audio-cd-rip.service"

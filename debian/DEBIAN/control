@@ -1,0 +1,11 @@
+Package: CD-ROM-auto-RIPper
+Version: 0.1
+Section: base
+Priority: optional
+Architecture: all
+Depends: udev, ubuntu-restricted-extras, ubuntu-restricted-addons, abcde, lame, flac, libva-dev, libdrm-dev, libdvdread-dev, handbrake-cli, libdvd-pkg
+Maintainer: renyard.m@gmail.com
+Description: CD-ROM Auto RIPper.
+  Auto RIP CD (~/Music) and DVD (~/Movies):
+   - RIPs audio CD to Music folder
+   - RIPs DVD movies to Movies folder

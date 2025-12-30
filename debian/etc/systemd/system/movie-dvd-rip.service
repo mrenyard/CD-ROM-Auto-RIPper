@@ -1,0 +1,7 @@
+[Unit]
+Description=Headless DVD Ripper
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/movie-dvd-rip.sh
+User=root
