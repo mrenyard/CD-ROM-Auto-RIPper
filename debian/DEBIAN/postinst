@@ -1,22 +1,22 @@
 #!/bin/bash
 
 if [ $USER == 'root' ]; then USER=$SUDO_USER; HOME="/home/${USER}"; fi
-sudo chmod 666 /etc/abcde.conf
+sudo chmod 666 /etc/abcde.conf;
 echo "SET A Better CD Encoder (abcde) Configuration file";
 sudo cp /etc/abcde.conf /etc/abcde.conf.dpkg-old;
-sudo sed -i "s|#OUTPUTDIR=`pwd`|OUTPUTDIR=${HOME}/Music|" /etc/abcde.conf
-sudo sed -i 's|#OUTPUTTYPE=ogg|OUTPUTTYPE=flac|' /etc/abcde.conf
-sudo sed -i "s|#OUTPUTFORMAT='\${ARTISTFILE}-\${ALBUMFILE}/\${TRACKNUM}.\${TRACKFILE}'|OUTPUTFORMAT='\${ARTISTFILE}/\${ALBUMFILE}/\${TRACKNUM}.\${TRACKFILE}'|" /etc/abcde.conf
-sudo sed -i "s|#VAOUTPUTFORMAT='Various-\${ALBUMFILE}/\${TRACKNUM}.\${ARTISTFILE}-\${TRACKFILE}'|VAOUTPUTFORMAT='Various/\${ALBUMFILE}/\${TRACKNUM}.\${ARTISTFILE}-\${TRACKFILE}'|" /etc/abcde.conf
-sudo chmod 644 /etc/abcde.conf
+sudo sed -i "s|#OUTPUTDIR=`pwd`|OUTPUTDIR=${HOME}/Music|" /etc/abcde.conf;
+sudo sed -i 's|#OUTPUTTYPE=ogg|OUTPUTTYPE=flac|' /etc/abcde.conf;
+sudo sed -i "s|#OUTPUTFORMAT='\${ARTISTFILE}-\${ALBUMFILE}/\${TRACKNUM}.\${TRACKFILE}'|OUTPUTFORMAT='\${ARTISTFILE}/\${ALBUMFILE}/\${TRACKNUM}.\${TRACKFILE}'|" /etc/abcde.conf;
+sudo sed -i "s|#VAOUTPUTFORMAT='Various-\${ALBUMFILE}/\${TRACKNUM}.\${ARTISTFILE}-\${TRACKFILE}'|VAOUTPUTFORMAT='Various/\${ALBUMFILE}/\${TRACKNUM}.\${ARTISTFILE}-\${TRACKFILE}'|" /etc/abcde.conf;
+sudo chmod 644 /etc/abcde.conf;
 
 sudo sed -i "s|\[HOME\]|${HOME}|" /usr/local/sbin/audio-cd-rip.sh;
 sudo sed -i "s|\[HOME\]|${HOME}|" /usr/local/sbin/movie-dvd-rip.sh;
 sudo sed -i "s|\[USER\]|${USER}|" /usr/local/sbin/movie-dvd-rip.sh;
 
 echo "SETTING UP LOG FILE AT /var/log/rip.log";
-sudo touch /var/log/rip.log
-sudo chmod 666 /var/log/rip.log
+sudo touch /var/log/rip.log;
+sudo chmod 666 /var/log/rip.log;
 
 echo "RELOADING MODIFIED SERVICES";
 sudo systemctl daemon-reload
