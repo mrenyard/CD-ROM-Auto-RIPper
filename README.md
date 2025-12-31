@@ -5,6 +5,6 @@
 Version: 0.1
 
 Description: CD-ROM Auto RIPper.
-  Auto RIP CD (~/Music) and DVD (~/Movies):
+  Auto RIP CD (\~/Music) and DVD (\~/Movies):
    - RIPs audio CD to Music folder
    - RIPs DVD movies to Movies folder
