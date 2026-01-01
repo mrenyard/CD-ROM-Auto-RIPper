@@ -3,7 +3,7 @@ Version: 0.1
 Section: base
 Priority: optional
 Architecture: all
-Depends: udev, ubuntu-restricted-extras, ubuntu-restricted-addons, abcde, lame, flac, libva-dev, libdrm-dev, libdvdread-dev, handbrake-cli, libdvd-pkg
+Depends: udev, ubuntu-restricted-extras, ubuntu-restricted-addons, abcde, lame, flac, libdvdcss2, lsdvd, libdvd-pkg, libdvdread-dev, handbrake-cli
 Maintainer: renyard.m@gmail.com
 Description: CD-ROM Auto RIPper.
   Auto RIP CD (~/Music) and DVD (~/Movies):
