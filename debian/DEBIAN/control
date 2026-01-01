@@ -3,6 +3,7 @@ Version: 0.1
 Section: base
 Priority: optional
 Architecture: all
+# udev, blkid, abcde, handbrake-cli, libdvdcss2, lsdvd, libdvd-pkg, eject
 Depends: udev, ubuntu-restricted-extras, ubuntu-restricted-addons, abcde, lame, flac, libdvdcss2, lsdvd, libdvd-pkg, libdvdread-dev, handbrake-cli
 Maintainer: renyard.m@gmail.com
 Description: CD-ROM Auto RIPper.
