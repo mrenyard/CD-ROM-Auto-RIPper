@@ -11,10 +11,7 @@ case ${PROCESS_TYPE} in
       echo "Must be run from parent project containing directory NOT $0";
       exit 1;
     fi
-    if [[ $EUID -ne 0 ]]; then
-       echo "This script must be run as root" 1>&2;
-       exit 1;
-    fi
+    if [[ $EUID -ne 0 ]]; then echo "This script must be run as root" 1>&2; exit 1; fi
     read -p "Save package as location/name_version-release_architecture.deb [../CD-ROM-auto-RIPper_0.1-0_all.deb]: " SAVE_AS;
     SAVE_AS=${SAVE_AS:-"../CD-ROM-auto-RIPper_0.1-0_all.deb"};
   case ${PROCESS_TYPE} in
@@ -47,7 +44,7 @@ case ${PROCESS_TYPE} in
   case ${PROCESS_TYPE} in
     "--deploy")
       echo "DEPLOYING..."
-      sudo apt install udev ubuntu-restricted-extras ubuntu-restricted-addons handbrake-cli libva-dev libdrm-dev libdvd-pkg libdvdread-dev abcde flac -y;
+      sudo apt install udev blkid abcde handbrake-cli libdvdcss2 lsdvd libdvd-pkg eject -y;
       sudo dpkg -i ${SAVE_AS};
       if [ $? -ne 0 ]; then
         cd "$SCRIPTPATH";

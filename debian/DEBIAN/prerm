@@ -1,6 +1,6 @@
 #!/bin/bash
 
 if [ -f /etc/abcde.conf.dpkg-old ]; then
-  sudo mv /etc/abcde.conf.dpkg-old /etc/abcde.conf.;
+  sudo mv /etc/abcde.conf.dpkg-old /etc/abcde.conf;
 fi
 exit 0;

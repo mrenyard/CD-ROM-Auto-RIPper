@@ -13,6 +13,7 @@ sudo chmod 644 /etc/abcde.conf;
 sudo sed -i "s|\[HOME\]|${HOME}|" /usr/local/sbin/audio-cd-rip.sh;
 sudo sed -i "s|\[HOME\]|${HOME}|" /usr/local/sbin/movie-dvd-rip.sh;
 sudo sed -i "s|\[USER\]|${USER}|" /usr/local/sbin/movie-dvd-rip.sh;
+sudo sed -i "s|\[USER\]|${USER}|" /usr/local/sbin/movie-dvd-rip.sh;
 
 echo "SETTING UP LOG FILE AT /var/log/rip.log";
 sudo touch /var/log/rip.log;
