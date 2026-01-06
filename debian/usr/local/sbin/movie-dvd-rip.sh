@@ -39,8 +39,7 @@ else
     exit $rc;
   fi
   echo "done!" >> $LOGFILE;
+  sudo chown [USER]:[USER] "[HOME]/Movies/${DVD_TITLE}.mp4";
 fi
-sudo chmod +x "[HOME]/Movies/${DVD_TITLE}.mp4";
-sudo chown [USER]:[USER] "[HOME]/Movies/${DVD_TITLE}.mp4";
 eject /dev/sr1;
 exit 0;
