@@ -15,9 +15,11 @@ sudo sed -i "s|\[HOME\]|${HOME}|" /usr/local/sbin/movie-dvd-rip.sh;
 sudo sed -i "s|\[USER\]|${USER}|" /usr/local/sbin/movie-dvd-rip.sh;
 sudo sed -i "s|\[USER\]|${USER}|" /usr/local/sbin/movie-dvd-rip.sh;
 
-echo "SETTING UP LOG FILE AT /var/log/rip.log";
-sudo touch /var/log/rip.log;
-sudo chmod 666 /var/log/rip.log;
+echo "SETTING UP LOG FILEs AT /var/log/ripper";
+sudo mkdir -p /var/log/ripper;
+sudo touch /var/log/ripper/cd.log;
+sudo touch /var/log/ripper/dvd.log;
+sudo chmod 666 /var/log/ripper/*.log;
 
 echo "RELOADING MODIFIED SERVICES";
 sudo systemctl daemon-reload

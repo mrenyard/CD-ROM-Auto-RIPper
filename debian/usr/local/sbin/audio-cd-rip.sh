@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOGFILE=/var/log/rip.log;
+LOGFILE=/var/log/ripper/cd.log;
 echo -e "\nAudio CD RIP CALLED: $(date)" >> $LOGFILE;
 abcde -Nx 2>&1 >> $LOGFILE;
 if [ -d "[HOME]/Music/Unknown_Artist/Unknown_Album" ]; then

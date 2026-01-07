@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOGFILE=/var/log/rip.log;
+LOGFILE=/var/log/ripper/dvd.log;
 if [[ "${1}" == "--set-for-manual"  ]]; then
   sudo touch /usr/local/sbin/movie-dvd-rip-manual.flag; 
   echo "Set for manual mode... Please reinsert DVD";
