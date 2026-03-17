@@ -23,6 +23,5 @@ sudo chmod 666 /var/log/ripper/*.log;
 
 echo "RELOADING MODIFIED SERVICES";
 sudo systemctl daemon-reload
-sudo service udev restart;
 sudo dpkg-reconfigure libdvd-pkg;
 exit 0;
